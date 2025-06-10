@@ -1,6 +1,6 @@
 # jhua0458_9103_Final
 ## How to Interact
-The overall dynamics of the work presents the effects of rotation. The specific interactive effects are as follows:
+The work as a whole achieves dynamic effects through rotation. The specific interactive effects are as follows:
 
 - **Change the image state through different buttons：** When any of the Q, W, E or R keys on the keyboard is pressed, the corresponding image state change will be triggered according to the key, which gives the main visual elements different levels and playability.
 
