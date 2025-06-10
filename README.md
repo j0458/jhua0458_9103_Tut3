@@ -8,6 +8,6 @@ The overall dynamics of the work presents the effects of rotation and progressiv
 
 - **Outer circle dynamics (`mouseX`):** When `mouseX` increases, the small circle in the outer circle will shrink towards the center. Conversely, when `mouseX` decreases, the small circle in the outer circle will spread out.
 
-- ** Dynamic lines radiating outwards (`mouseX`)(`mouseY`):** When the mouse moves horizontally or vertically, the lines radiating outward will change randomly, thereby increasing the dynamic interest of the picture.
+- **Dynamic lines radiating outwards (`mouseX`)(`mouseY`):** When the mouse moves horizontally or vertically, the lines radiating outward will change randomly, thereby increasing the dynamic interest of the picture.
 
 - **Random stars appear in the center:** By clicking the mouse, twinkling stars will appear randomly in the center circle, increasing the overall fun and uncertainty.
