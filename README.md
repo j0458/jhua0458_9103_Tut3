@@ -27,8 +27,6 @@ My work is inspired by the following two works:
 
 - **Picture 2:** Compared with the mechanical and monotonous feeling brought by circular elements rotating in a single direction, multiple circular elements rotating in different directions at the same time can visually create a dynamic sense of order and staggered space. It guides the viewer to feel the fluidity and complexity of time while gazing, as if they are in a concrete "time field". In this way, the interface not only becomes a visual carrier, but also symbolizes the experience of the passage of time.
 
-
-
 ![Picture 1 – Line rotation](images/Picture1.png)  
 **Picture 1:** Line rotation ([Source](https://openprocessing.org/sketch/863365))
 
