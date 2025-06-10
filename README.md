@@ -21,5 +21,15 @@ I chose **User Input** to drive my personal code.
 ？
 
 ## Inspiration
+My work is mainly inspired by the following two visual references:
+
+- **Picture 1:** 
+
+- **Picture 2:** 
+
+
+![Picture 1 – Rhythmic Lines](images/Picture 1.jpg)  
+**Picture 1:** Rhythmic Lines ([Source](https://openprocessing.org/sketch/863365))
+
 
 
