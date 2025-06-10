@@ -33,6 +33,6 @@ My work is inspired by the following two works:
 **Picture 1:** Line rotation ([Source](https://openprocessing.org/sketch/863365))
 
 ![Picture 2 – Time Spiral](images/Picture2.png)  
-**Picture 1:** Line rotation ([Source](https://au.pinterest.com/pin/2111131072429523/))
+**Picture 2:** Line rotation ([Source](https://au.pinterest.com/pin/2111131072429523/))
 
 
