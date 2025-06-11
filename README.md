@@ -4,11 +4,11 @@ The work as a whole achieves dynamic effects through rotation. The specific inte
 
 - **Use different keyboard keys to change the main element's state：** Pressing any of the Q, W, E, or R keys triggers changes in the main visual element, adding distinct layers and interactivity based on the key pressed.
 
+- **Dynamics of the central moon (`mouseX`):** The movement of the mouse causes the main visual graphic elements to rotate.
+
 - **Random stars appear in the center:** By clicking the mouse, twinkling stars will appear randomly in the center circle, increasing the overall fun and uncertainty.
 
-- **Moon Dynamics (`mouseX`):** The movement of the mouse causes the main visual graphic elements to rotate.
-
-- **Six gradient circle dynamics (`mouseX`):** When `mouseX` increases, the small circle in the outer circle will shrink towards the center. Conversely, when `mouseX` decreases, the small circle in the outer circle will spread out.
+- **Six gradient circle zoom effects (`mouseX`):** When `mouseX` increases, the radius of the gradient circle decreases. Conversely, when `mouseX` decreases, the radius of the gradient circle increases.
 
 - **Dynamic lines radiating outwards (`mouseX`)(`mouseY`):** When the mouse moves horizontally or vertically, the lines radiating outward will rotate and change accordingly, adding dynamic interest to the picture.
 
@@ -113,4 +113,50 @@ function mouseReleased() {
 	Decryption = false
 	haveStar = false
 }
+```
+
+### Six gradient circle zoom effects (`mouseX`)
+In this code, cos(mouseX / 18) is used to achieve the scaling effect of the circle size changing with the horizontal position of the mouse.
+
+```
+if (d < 0) {
+        let innerColor = color(255, 255, 255, 255);
+        let outerColor = color(0, 0, 0, 255);
+
+        for (let i = 0; i < 6; i++) {
+          drawRadialGradientCircle(sx1, sy1, cos(mouseX / 18) * 70 - i * 10 - j * 10, innerColor, outerColor);
+        }
+      } else {
+        let innerColor1 = color(0, 0, 0, 150);
+        let outerColor1 = color(255, 255, 255,);
+        for (let i = 0; i < 6; i++) {
+          drawRadialGradientCircle(sx1, sy1, cos(mouseX / 18) * 50 - i * 10 - j * 10, innerColor1, outerColor1);
+        }
+      }
+```
+
+### Dynamic lines radiating outwards (`mouseX`)(`mouseY`)
+This code uses mouseX and mouseY to control the number of lines and the rotation angle: the outer loop is determined by mouseY / 160, and the inner loop is determined by mouseX / 30; In controlling the angle of the line, - i * mouseX / width * 10 and - i * mouseY / height * 10 dynamically adjust the rotation offset according to the horizontal and vertical positions of the mouse respectively; The horizontal length of the line is controlled by mouseX, and the vertical length is controlled by mouseY. In this way, a radial dynamic effect that changes with the movement of the mouse is achieved.
+
+```
+ drawLine() {
+    let drawLineDegree = 45
+    for (let j = 0; j < mouseY / 160; j++) {
+      for (let i = 0; i < mouseX / 30; i++) {
+        push()
+        strokeWeight(this.size / 200)
+        stroke(255, random(120, 180))
+
+        let x1 = cos(drawLineDegree * j - 67.5 - i * mouseX / width * 10) * this.size * mouseX / width * 5 + this.x
+        let y1 = sin(drawLineDegree * j - 67.5 - i * mouseY / height * 10) * this.size * mouseY / height * 3 + this.y
+        line(this.x, this.y, x1, y1)
+        pop()
+      }
+    }
+    push()
+    fill(0)
+    noStroke()
+    circle(this.x, this.y, this.size * 1.15)
+    pop()
+  }
 ```
