@@ -19,8 +19,8 @@ The entire piece demonstrates dynamic state transitions controlled by mouse and 
 ### Choice
 I chose **User Input** to drive my personal code.
 
-### Which properties of the image will be animated and how
-？
+### My code features
+My personal code design revolves around the concept of "time passing". The main visual element simulates the rhythm of the clock through regular and smooth rotation, conveying the feeling of time continuing to advance. The outer radial lines, combined with length and angle changes, break the limitations of the two-dimensional plane and enhance the sense of space and visual hierarchy. The irregular rotation rhythm also adds rhythm and interest to the picture. In order to add occasional changes, I set randomly appearing stars in the center to symbolize the uncertain moments in time. All animation effects are linked to the mouse position in real time, making the interaction more natural and smooth. I also added keyboard input to control different main visual states to enhance interactivity. The overall black and white tones are matched with the starry sky background to enhance the tranquility and profound atmosphere of the flow of time.
 
 ## Inspiration
 My work is inspired by the following two works:
