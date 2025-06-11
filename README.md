@@ -127,7 +127,7 @@ function mouseReleased() {
 ```
 
 ### Star rotation dynamics (`mouseX`)
-By assigning mouseX to the angle parameter in drawStar(x, y, size, angle), the star's rotation angle updates in real time as the mouse moves horizontally across the canvas. As mouseX changes, the input angle for drawStar() also changes, creating a dynamic rotational effect for the star graphic.
+By assigning mouseX to the angle parameter in the drawStar(x, y, size, angle) function, the rotation angle of the star will be updated in real time as the mouse moves horizontally on the canvas. At the same time, the input angle of the drawStar() function will also change with the change of mouseX, thus creating a dynamic rotation effect for the star graphic.
 
 ```
 //Draw a star at the bottom for decoration
