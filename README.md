@@ -4,8 +4,6 @@ The work as a whole achieves dynamic effects through rotation. The specific inte
 
 - **Use different keyboard keys to change the main element's state：** Pressing any of the Q, W, E, or R keys triggers changes in the main visual element, adding distinct layers and interactivity based on the key pressed.
 
-- **Dynamics of the central moon (`mouseX`):** The movement of the mouse causes the main visual graphic elements to rotate.
-
 - **Random stars appear in the center:** By clicking the mouse, twinkling stars will appear randomly in the center circle, increasing the overall fun and uncertainty.
 
 - **Six gradient circle zoom effects (`mouseX`):** When `mouseX` increases, the radius of the gradient circle decreases. Conversely, when `mouseX` decreases, the radius of the gradient circle increases.
