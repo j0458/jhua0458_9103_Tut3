@@ -1,12 +1,14 @@
 # jhua0458_9103_Final
 ## How to Interact
-The work as a whole achieves dynamic effects through rotation. The specific interactive effects are as follows:
+The entire piece demonstrates dynamic state transitions controlled by mouse and keyboard input. The detailed interaction methods are outlined below:
 
 - **Use different keyboard keys to change the main element's state：** Pressing any of the Q, W, E, or R keys triggers changes in the main visual element, adding distinct layers and interactivity based on the key pressed.
 
+- **Main visual elements rotate (`mouseX`):** As the `mouseX` changes, the main visual element will rotate.
+
 - **Random stars appear in the center:** By clicking the mouse, twinkling stars will appear randomly in the center circle, increasing the overall fun and uncertainty.
 
-- **Star Rotation Dynamics (`mouseX`):** As the mouse moves horizontally, the vertex stars and the central star at the bottom of the hexagram rotate correspondingly.
+- **Star rotation dynamics (`mouseX`):** When the `mouseX` changes, the vertex star and the center star at the bottom of the hexagonal star will rotate accordingly.
 
 - **Six gradient circle zoom effects (`mouseX`):** When `mouseX` increases, the radius of the gradient circle decreases. Conversely, when `mouseX` decreases, the radius of the gradient circle increases.
 
@@ -94,6 +96,14 @@ function keyPressed() {
 }
 ```
 
+### Main visual elements rotate (`mouseX`)
+By linking rotate() to the mouse's X position, the overall rotation of all main visual elements is achieved. Dividing mouseX by 10 maps the larger mouse position values to smaller rotation angles (in radians), resulting in a smoother and more fluid rotation animation.
+
+```
+//Main visual elements rotate
+	rotate(mouseX / 10)
+```
+
 ### Random stars appear in the center.
 This code implements the mouse interaction logic in the p5.js sketch. When the user presses the mouse (mousePressed()), a random value between 0 and 1 is generated. If the value is less than 0.5, the boolean variable haveStar is set to true and the Decryption flag is enabled, which conditionally triggers the rendering of the star.
 
@@ -116,12 +126,11 @@ function mouseReleased() {
 }
 ```
 
-### Star Rotation Dynamics (`mouseX`)
+### Star rotation dynamics (`mouseX`)
 By assigning mouseX to the angle parameter in drawStar(x, y, size, angle), the star's rotation angle updates in real time as the mouse moves horizontally across the canvas. As mouseX changes, the input angle for drawStar() also changes, creating a dynamic rotational effect for the star graphic.
 
 ```
 //Draw a star at the bottom for decoration
-	rotate(mouseX / 10)
 	drawStar(0, 0, totalR / 1.9, mouseX)
 
 //Draw the triangle vertex star
@@ -131,7 +140,7 @@ By assigning mouseX to the angle parameter in drawStar(x, y, size, angle), the s
 ```
 
 ### Six gradient circle zoom effects (`mouseX`)
-In this code, cos(mouseX / 18) is used to achieve the scaling effect of the circle size changing with the horizontal position of the mouse.
+In this code, the radius is set to cos(mouseX / 18) * 70 - i * 10 - j * 10, causing the circles drawn by drawRadialGradientCircle() to dynamically change size based on the mouse's horizontal position (mouseX), thereby achieving a scaling effect.
 
 ```
 if (d < 0) {

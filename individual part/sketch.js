@@ -47,8 +47,10 @@ function draw() {
 	let totalR = width / 6
 
 	//Draw a star at the bottom for decoration
-	rotate(mouseX / 10)
 	drawStar(0, 0, totalR / 1.9, mouseX)
+
+	//Main visual elements rotate
+	rotate(mouseX / 10)
 
 
 	//Draw all the concentric circles

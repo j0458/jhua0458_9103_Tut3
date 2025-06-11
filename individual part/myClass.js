@@ -81,6 +81,7 @@ class createMultipleCircle {
         points.push(createVector(sx1, sy1));
       }
       vertex(sx1, sy1);
+      
       //gradient circle
       push();
 
