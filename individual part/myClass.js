@@ -19,6 +19,7 @@ class createMultipleCircle {
       circle(this.x - (this.size / 2 - (this.size - j * smallMoon) / 2), this.y, this.size - j * smallMoon)
     }
   }
+  
   //Line made of circles
   lineCircle() {
     for (let j = 0; j < 360 / 2; j++) {
