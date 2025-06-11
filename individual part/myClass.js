@@ -5,6 +5,7 @@ class createMultipleCircle {
     this.y = centerY
     this.size = centerSize
   }
+  
   //draw the moon
   drawMoon() {
     noStroke()
@@ -34,6 +35,7 @@ class createMultipleCircle {
     }
 
   }
+
   //There is a circle of dots between two circular lines
   decorationCircle() {
     push()
@@ -61,6 +63,7 @@ class createMultipleCircle {
       circle(zhouX1, zhouY1, this.size / 40)
     }
   }
+
   //Draw different triangles by angle control, and it is related to the size of the circle.
   drawTriangle(d) {
     noFill()
@@ -99,6 +102,7 @@ class createMultipleCircle {
       pop();
     }
     endShape()
+
     //Draw the center star
     push()
     blendMode(LIGHTEST)
@@ -129,8 +133,8 @@ class createMultipleCircle {
     noStroke()
     circle(this.x, this.y, this.size * 1.15)
     pop()
-
   }
+
   //The ordered points of the outermost circle.
   diverPoint() {
     for (let j = 0; j < 360; j++) {
@@ -147,6 +151,7 @@ class createMultipleCircle {
       }
     }
   }
+
   //Draw random points.
   randomPoint() {
     push()

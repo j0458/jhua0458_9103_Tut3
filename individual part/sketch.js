@@ -53,6 +53,7 @@ function draw() {
 
 	//Draw all the concentric circles
 	coreElements = new createMultipleCircle(0, 0, totalR)
+	
 	//Different num numbers display different main elements
 	if (num == 1) {
 		coreElements.drawLine()
