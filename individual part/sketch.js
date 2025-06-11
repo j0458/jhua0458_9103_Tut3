@@ -46,7 +46,7 @@ function draw() {
 	translate(width / 2, height / 2);
 	let totalR = width / 6
 
-	//Draw a random star at the bottom for decoration
+	//Draw a star at the bottom for decoration
 	rotate(mouseX / 10)
 	drawStar(0, 0, totalR / 1.9, mouseX)
 

@@ -103,7 +103,7 @@ class createMultipleCircle {
     }
     endShape()
 
-    //Draw the center star
+    //Draw the triangle vertex star
     push()
     blendMode(LIGHTEST)
     for (let pt of points) {

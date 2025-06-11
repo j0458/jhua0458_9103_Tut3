@@ -6,6 +6,8 @@ The work as a whole achieves dynamic effects through rotation. The specific inte
 
 - **Random stars appear in the center:** By clicking the mouse, twinkling stars will appear randomly in the center circle, increasing the overall fun and uncertainty.
 
+- **Star Rotation Dynamics (`mouseX`):** As the mouse moves horizontally, the vertex stars and the central star at the bottom of the hexagram rotate correspondingly.
+
 - **Six gradient circle zoom effects (`mouseX`):** When `mouseX` increases, the radius of the gradient circle decreases. Conversely, when `mouseX` decreases, the radius of the gradient circle increases.
 
 - **Dynamic lines radiating outwards (`mouseX`)(`mouseY`):** When the mouse moves horizontally or vertically, the lines radiating outward will rotate and change accordingly, adding dynamic interest to the picture.
@@ -37,6 +39,7 @@ My work is inspired by the following two works:
 First, set the main visual rendering (based on the num value). Depending on the value of num, different drawing function combinations in coreElements are triggered to display various graphic elements. Then, through key detection (keyPressed() function), when the user presses the Q, W, E, or R key, the program assigns the variable num to the corresponding number (1 to 4) to switch the current primary visual state.
 
 ```
+//Different num numbers display different main elements
 	if (num == 1) {
 		coreElements.drawLine()
 		coreElements.diverPoint()
@@ -111,6 +114,20 @@ function mouseReleased() {
 	Decryption = false
 	haveStar = false
 }
+```
+
+### Star Rotation Dynamics (`mouseX`)
+By assigning mouseX to the angle parameter in drawStar(x, y, size, angle), the star's rotation angle updates in real time as the mouse moves horizontally across the canvas. As mouseX changes, the input angle for drawStar() also changes, creating a dynamic rotational effect for the star graphic.
+
+```
+//Draw a star at the bottom for decoration
+	rotate(mouseX / 10)
+	drawStar(0, 0, totalR / 1.9, mouseX)
+
+//Draw the triangle vertex star
+    for (let pt of points) {
+      drawStar(pt.x, pt.y, starSize / 5, mouseX)
+    }
 ```
 
 ### Six gradient circle zoom effects (`mouseX`)
